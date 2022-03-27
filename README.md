@@ -1,5 +1,7 @@
 # MovieNow
 
+### Projeto de busca e indicação de filmes usando angular e a api publica http://www.omdbapi.com/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
 
 ## Development server
