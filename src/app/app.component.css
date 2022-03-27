@@ -1,0 +1,80 @@
+html {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to bottom, rgb(5, 5, 5), rgb(75, 75, 75));
+  min-height: 100vh;
+}
+
+
+.menu {
+  flex-direction: row;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.title {
+  background-image: linear-gradient(to bottom, red, white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.lista-menu {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  background-image: linear-gradient(to bottom, red, black);
+  padding: 0px 10px;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+.lista-menu li {
+  padding: 20px 0;
+}
+.lista-menu li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  transition-duration: 0.5s;
+}
+.lista-menu li a:hover {
+  color: red;
+}
+
+@media (max-width: 400px){
+  h1 {
+      font-size: 25px;
+  }
+  .lista-menu {
+      width: 90%;
+      margin: 0px 0px 10px 0px;
+  }
+  .lista-menu li {
+      padding: 10px;
+  }
+  .lista-menu li a {
+      font-size: 15px;
+  }
+}
+
+
+
+.body {
+  margin: 0 20px 20px;
+  padding: 0px 0px 20px;
+}
+
+.footer {
+  margin: 0;
+  width: 100%;
+  background-image: linear-gradient(to bottom, red, black);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: white;
+  padding: 5px;
+}
+

@@ -1,0 +1,58 @@
+<h1>Filmes</h1>
+
+<div class="container">
+  <div class="indica">
+    <h2>Deseja uma indicação? </h2>
+    <div style="display: flex; flex-direction: row; align-items: center;">
+      <p>Clique aqui: &nbsp;</p>
+      <input type="submit" class="btnSubmit" value="Indicação" (click)="indicacaoFilmes()" />
+    </div>
+    <div *ngIf="indicaMovie" class="filme-itens">
+        <h4>{{indicaMovie.Title}}</h4>
+        <img src="{{indicaMovie.Poster}}" alt="Poster do Filme">
+        <h5>Year: </h5><p>{{indicaMovie.Year}}</p>
+        <h5>Runtime: </h5><p>{{indicaMovie.Runtime}}</p>
+        <h5>Genre: </h5><p>{{indicaMovie.Genre}}</p>
+        <h5>Director: </h5><p>{{indicaMovie.Director}}</p>
+        <h5>Writer: </h5><p>{{indicaMovie.Writer}}</p>
+        <h5>Actors: </h5><p>{{indicaMovie.Actors}}</p>
+        <h5>Plot: </h5><p>{{indicaMovie.Plot}}</p>
+        <h5>Language: </h5><p>{{indicaMovie.Language}}</p>
+        <h5>Country: </h5><p>{{indicaMovie.Country}}</p>
+        <h5>Awards: </h5><p>{{indicaMovie.Awards}}</p>
+        <h5>imdbRating: </h5><p>{{indicaMovie.imdbRating}}</p>
+        <h5>BoxOffice: </h5><p>{{indicaMovie.BoxOffice}}</p>
+    </div>
+  </div>
+
+  <div class="pesquisa">
+    <h2>Deseja pesquisar um filme?</h2>
+    <input style="max-width: 400px;" type="text" placeholder="Insira o nome em inglês do filme" id="t"
+      name="t" [(ngModel)]="t">
+    <div style="display: flex; flex-direction: row; align-items: center;">
+      <input type="submit" class="btnSubmit" value="Pesquisar" (click)="pesquisarFilmes()" />
+    </div>
+    <div *ngIf="resultMovie" class="filme-itens">
+      <div *ngIf="this.filmeExiste; else naoEncontrado">
+        <h4>{{resultMovie.Title}}</h4>
+        <img src="{{resultMovie.Poster}}" alt="Poster do Filme">
+        <h5>Year: </h5><p>{{resultMovie.Year}}</p>
+        <h5>Runtime: </h5><p>{{resultMovie.Runtime}}</p>
+        <h5>Genre: </h5><p>{{resultMovie.Genre}}</p>
+        <h5>Director: </h5><p>{{resultMovie.Director}}</p>
+        <h5>Writer: </h5><p>{{resultMovie.Writer}}</p>
+        <h5>Actors: </h5><p>{{resultMovie.Actors}}</p>
+        <h5>Plot: </h5><p>{{resultMovie.Plot}}</p>
+        <h5>Language: </h5><p>{{resultMovie.Language}}</p>
+        <h5>Country: </h5><p>{{resultMovie.Country}}</p>
+        <h5>Awards: </h5><p>{{resultMovie.Awards}}</p>
+        <h5>imdbRating: </h5><p>{{resultMovie.imdbRating}}</p>
+        <h5>BoxOffice: </h5><p>{{resultMovie.BoxOffice}}</p>
+        <!-- <p *ngFor="let ratings of resultMovie.Ratings">{{ratings.Source}} & {{ratings.Value}}</p> -->
+      </div>
+      <ng-template #naoEncontrado>
+        <p>Filme não Encontrado!</p>
+      </ng-template>
+    </div>
+  </div>
+</div>
